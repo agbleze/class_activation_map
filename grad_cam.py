@@ -15,3 +15,10 @@ import pandas as pd
 # 4. Visualize image with in clusters and when an image is clicked, its CAM should be shown
 # 5. Option to run 
 
+## Features outlier detection
+# Outliers detection 
+# Adversarial attacks
+# clustering
+# selecting images based on similarity and difference
+# detecting level of annonymization and features not to annonymize 
+# 
