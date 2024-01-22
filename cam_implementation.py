@@ -9,17 +9,18 @@ from torchvision.utils import make_grid, save_image
 import matplotlib.pyplot as plt
 import torchvision
 
-from gradcam.utils import visualuize_cam
+from gradcam.utils import visualize_cam
 from gradcam import GradCAM, GradCAMpp
 
 
-img_path = ""
+img_path = "cat.png"
 pil_img = PIL.Image.open(img_path)
 width, height = pil_img.size
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 resized_torch_img = transforms.Compose([transforms.Resize((224, 224)),
-                                        transforms.ToTensor()])(pil_img).to(device)
+                                        transforms.ToTensor()]
+                                       )(pil_img).to(device)
 
 normalized_torch_img = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(resized_torch_img)[None]
 
