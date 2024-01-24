@@ -50,8 +50,12 @@ def main():
     x = load_image()
     outputs, decisions = model.forward_with_decisions(x)
     heirerchy_output(outputs, decisions)
-    
+
+
+#%%    
 if __name__ == "__main__":
     main()
 
 
+
+# %%
